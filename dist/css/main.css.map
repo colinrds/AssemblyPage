@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/css/index.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA","file":"css/main.css","sourcesContent":["body {\n  width: 100%;\n  height: 100%;\n  background: url(../img/bg.jpg) no-repeat;\n}\n"],"sourceRoot":""}

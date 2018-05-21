@@ -1,0 +1,233 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+div, li, i {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+
+#sidebar {
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #2B2B2B;
+  z-index: 9;
+}
+
+#sidebar li {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#sidebar li i {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+#sidebar li i.module-button {
+  background: url("../img/module_icon.png") no-repeat center center;
+  background-size: 24px 24px;
+}
+
+#sidebar li i.web-button {
+  background: url("../img/web_icon.png") no-repeat center center;
+  background-size: 24px 24px;
+}
+
+#sidebar li i.export-button {
+  background: url("../img/export_icon.png") no-repeat center center;
+  background-size: 26px 26px;
+}
+
+#sidebar li.hover {
+  background: #4C4C4C;
+}
+
+#sidebar li.hover i.module-button, #sidebar li:hover i.module-button {
+  background: url("../img/module_icon_hover.png") no-repeat center center;
+  background-size: 24px 24px;
+}
+
+#sidebar li.hover i.web-button, #sidebar li:hover i.web-button {
+  background: url("../img/web_icon_hover.png") no-repeat center center;
+  background-size: 24px 24px;
+}
+
+#sidebar li.hover i.export-button, #sidebar li:hover i.export-button {
+  background: url("../img/export_icon_hover.png") no-repeat center center;
+  background-size: 26px 26px;
+}
+
+#sidebar-main {
+  width: 299px;
+  height: 100%;
+  position: fixed;
+  left: -300px;
+  top: 0;
+  background: #FFF;
+  border-right: 1px solid #EEE;
+  z-index: 5;
+}
+
+#sidebar-main .sidebar-module-menu {
+  width: 100%;
+  overflow: hidden;
+  background: #68BFA6;
+  color: #FFF;
+}
+
+#sidebar-main .sidebar-module-menu li {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 33.333333%;
+  float: left;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+#sidebar-main .sidebar-module-menu li.hover {
+  background: #FFF;
+  color: #333;
+}
+
+#sidebar-main .sidebar-module-content {
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  padding: 10px 5px;
+}
+
+#sidebar-main .sidebar-module-content li {
+  width: calc(50% - 10px);
+  height: 80px;
+  padding: 5px;
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+
+#sidebar-main .sidebar-module-content li:hover {
+  background: #F6F6F6;
+}
+
+#sidebar-main .sidebar-module-content li img {
+  width: 100%;
+  height: 80px;
+}
+
+#sidebar-main .sidebar-module-content li .sidebar-module-id {
+  height: 20px;
+  line-height: 20px;
+  padding: 0 10px;
+  font-size: 12px;
+  background: #6BBEA6;
+  color: #FFF;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+#sidebar-main .sidebar-module-content li .sidebar-module-id:before {
+  position: absolute;
+  border-top: 10px solid #6BBEA6;
+  border-bottom: 10px solid transparent;
+  border-left: 6px solid #6BBEA6;
+  border-right: 6px solid transparent;
+  content: " ";
+  display: block;
+  right: -12px;
+  width: 0;
+  height: 0;
+}
+
+#sidebar-main .sidebar-main-title {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#sidebar-main .sidebar-main-form {
+  padding: 10px;
+}
+
+#sidebar-main .sidebar-main-form li {
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+#sidebar-main .sidebar-main-form li .sidebar-input-text {
+  width: 100%;
+  line-height: 30px;
+  margin-top: 10px;
+  border: 0;
+  border-bottom: 1px solid #EEE;
+}
+
+#sidebar-main .export-page {
+  width: calc(100% - 20px);
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #6BBEA6;
+  border-radius: 3px;
+  margin: 0 auto 10px auto;
+  display: block;
+  color: #FFF;
+}
+
+#sidebar-main .export-page:hover {
+  background: #72c9b0;
+}
+
+#sidebar-main .save-page {
+  width: calc(100% - 20px);
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #6BBEA6;
+  border-radius: 3px;
+  margin: 0 auto 20px auto;
+  display: block;
+  color: #FFF;
+}
+
+#sidebar-main .save-page:hover {
+  background: #72c9b0;
+}
+
+#page {
+  width: calc(100% - 50px);
+  height: 100%;
+  margin-left: 50px;
+}
+
+.module-line::before {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 1px dashed #CCC;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+}
+
+.set-module {
+  width: 36px;
+  height: 36px;
+  display: block;
+  background: rgba(0, 0, 0, 0.6) url("../img/set_icon.png") no-repeat center center;
+  background-size: 24px 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+  z-index: 16;
+  cursor: pointer;
+}
